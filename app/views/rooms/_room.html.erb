@@ -1,0 +1,4 @@
+<div> 
+    <%= turbo_frame_tag RoomMessage.new %>
+    <%= link_to room.name, room , data: {turbo_frame: dom_id(RoomMessage.new)} %>
+</div>

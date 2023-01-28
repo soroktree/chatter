@@ -1,0 +1,26 @@
+<div class="container" class = 'mt-3'>
+
+    <h3 class = 'mt-3'> 
+        Chats
+    </h3>
+
+    <%= render partial: "create_room_form" %>
+
+    <h5 class = 'mt-3'> 
+        Choose room 
+    </h5>
+    <%= turbo_stream_from "rooms" %>
+    <div id="rooms" class = "mt-3">
+        <%= render @rooms %>
+    </div>
+
+    <h3 class="mt-3"> 
+        Users 
+    </h3>
+
+    <%= turbo_stream_from "users" %>
+    <div id="users">
+        <%= render @users %>
+    </div>    
+
+</div>
